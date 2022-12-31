@@ -55,22 +55,10 @@ let courses = [
       },
     ];
 
-let image=[];
-courses.forEach((e,i)=>{
-image[i]=e.image;
-})
-let CourseName=[];
-courses.forEach((e,i)=>{
-CourseName[i]=e.CourseName;
-})
-let price=[];
-courses.forEach((e,i)=>{
-price[i]=e.price;
-})
 let products=document.getElementById("images");
 
 
 for(let i=0;i<3;i++){
     let nbr=Math.floor(Math.random() * 9);
-products.innerHTML+="<div class='image'> <img src='h"+image[nbr].slice(1 ,image[nbr].length)+"'><p class='tt'>"+CourseName[nbr]+"</p><p class='tt1'>"+price[nbr]+" $</p></div>";
+products.innerHTML+="<div class='photo'> <img src='"+courses[nbr].image+"'><p class='a'>"+courses.CourseName+"</p><p class='b'>"+courses[nbr].price+" $</p></div>";
 }
